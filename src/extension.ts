@@ -162,7 +162,7 @@ async function isWebProject(fullPath: vscode.Uri) {
 }
 
 async function getTemplateContent(templateName: string) {
-	var templatePath = vscode.extensions.getExtension('amest.csproj-launch-generator')?.extensionPath + '/templates/' + templateName + ".tmpl";
+	var templatePath = vscode.extensions.getExtension('nb47.csproj-launch-generator')?.extensionPath + '/templates/' + templateName + ".tmpl";
 	var templatePathUri = vscode.Uri.parse(templatePath);
 	var tasksTemplateFile = await vscode.workspace.openTextDocument(templatePathUri.path);
 	return tasksTemplateFile.getText();
