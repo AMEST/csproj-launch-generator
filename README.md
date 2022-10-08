@@ -8,7 +8,7 @@ Auto generate configuration in launch.json and tasks.json for build and debug do
 
 ##### Generate build task and launch config via context menu
 
-[[![ExtContextMenu.gif](https://wiki.nb-47.ml/api/attachment/634117873330f2de9139248e/ExtContextMenu.gif)](https://wiki.nb-47.ml/api/attachment/634117873330f2de9139248e/ExtContextMenu.gif)
+[![ExtContextMenu.gif](https://wiki.nb-47.ml/api/attachment/634117873330f2de9139248e/ExtContextMenu.gif)](https://wiki.nb-47.ml/api/attachment/634117873330f2de9139248e/ExtContextMenu.gif)
 
 ##### Generate build task and launch config via context menu
 
