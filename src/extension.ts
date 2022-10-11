@@ -2,13 +2,10 @@
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
 import * as fs from 'fs';
+import * as jsonParse from 'jsonc-parser';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
 	console.log('csproj-launch-generator is now active!');
 
 	context.subscriptions.push(vscode.commands.registerCommand('csproj-launch-generator.generate-launch', async (args) => {
@@ -63,8 +60,8 @@ async function addTask(projectPath: string, projectName: string) {
 	if (tasksContent.indexOf(taskLabel) !== -1) {
 		return;
 	}
-
-	let tasksObj: any = JSON.parse(tasksContent);
+	
+	let tasksObj: any = jsonParse.parse(tasksContent);
 	tasksObj.tasks.push({
 		"label": taskLabel,
 		"command": "dotnet",
@@ -95,7 +92,7 @@ async function addLaunch(projectPath: string, projectName: string, targetFramewo
 		return;
 	}
 
-	let launchObject: any = JSON.parse(launchContent);
+	let launchObject: any = jsonParse.parse(launchContent);
 
 	let launchConfig: any = {
 		"name": projectNameWithoutExtension,
